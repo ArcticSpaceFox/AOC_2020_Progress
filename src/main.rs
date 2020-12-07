@@ -1,3 +1,4 @@
+#![feature(str_split_once)]
 use anyhow::Result;
 
 pub mod util;
@@ -22,7 +23,7 @@ tasks!(run_tasks, {
     aoc_01_1,
     aoc_01_2,
     aoc_02_1,
-    // aoc_02_2,
+    aoc_02_2,
     // aoc_03_1,
     // aoc_03_2,
     // aoc_04_1,
