@@ -17,7 +17,6 @@ pub fn read_input(file: impl AsRef<Path>) -> Result<Vec<String>> {
     let mut path = PathBuf::new();
     path.push("data");
     path.push(file);
-    dbg!(&path);
     Ok(BufReader::new(File::open(path)?)
         .lines()
         // no idea why but this turbofish is needed

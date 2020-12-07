@@ -8,7 +8,10 @@ macro_rules! tasks {
             $(pub mod $task;)*
         }
         fn $fn_name() -> Result<()> {
-            $(tasks::$task::run()?;)*
+            $(
+                println!("\nRUNNING TASK {}", stringify!($task));
+                tasks::$task::run()?;
+            )*
             Ok(())
         }
     };
@@ -16,9 +19,9 @@ macro_rules! tasks {
 
 // uncomment implemented tasks :D
 tasks!(run_tasks, {
-    // aoc_01_1,
-    // aoc_01_2,
-    // aoc_02_1,
+    aoc_01_1,
+    aoc_01_2,
+    aoc_02_1,
     // aoc_02_2,
     // aoc_03_1,
     // aoc_03_2,
